@@ -1,6 +1,20 @@
+/*按钮*/
+button{
+    -webkit-border-radius: 0.12rem;
+    -moz-border-radius: 0.12rem;
+    border-radius: 0.12rem;
+}
+[class ^= "bg-"]{
+    color: #ffffff;
+}
+/*白色背景*/
+.bg-white{
+    background-color: #ffffff;
+}
 /*默认按钮背景色*/
 .bg-default{
     background-color: #eb6100;
+    color: #ffffff;
 }
 /*灰色状态背景色*/
 .bg-gray{
@@ -14,14 +28,11 @@
 .bg-warning{
     background-color: #f0ad4e;
 }
-
 /*通知信息的按钮背景色*/
 .bg-info{
     background-color: #5bc0de;
 }
-
 /*文本居中*/
-
 .txt-center{
     text-align: center;
 }
@@ -98,11 +109,130 @@
     background-color: #ffffff;
     font-size:0.26rem;
     padding:0.2rem 0.35rem;
+    position: relative;
 }
 .sign-ruler .ruler-title{
     color: #000;
     font-size: 0.36rem;
+    position: relative;
 }
 .sign-ruler p{
     line-height: 0.45rem;
+}
+.sign-ruler .triangle-wrap{
+    width: 0.4rem;
+    height: 0.4rem;
+    color: #ffffff;
+    margin: 0 auto;
+    position: relative;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.sign-ruler .triangle-wrap .triangle{
+    display: block;
+    height:0;
+    width:0;
+    border-left: 0.12rem solid transparent;
+    border-right: 0.12rem solid transparent;
+    border-top: 0.12rem solid #ffffff;
+    position: absolute;
+    left:50%;
+    top:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.model-content{
+    padding:0.2rem 0.3rem;
+    background-color: #ffffff;
+    position: relative;
+}
+
+
+
+/*参加数量以及用户头像*/
+.part-num{
+    color: #000000;
+    font-size: 0.25rem;
+}
+.user-small-pic{
+    padding-top:0;
+    padding-bottom: 0.05rem;
+}
+.user-small-pic li{
+    float: left;
+    width:0.57rem;
+    height:0.57rem;
+    overflow: hidden;
+    border-radius:0.1rem;
+    margin-right:0.13rem;
+    margin-bottom:0.15rem;
+}
+
+/*按钮*/
+.main-btn{
+    padding-top: 0;
+}
+.main-btn li{
+    float: left;
+    width:33.3333%;
+    padding:0 0.12rem;
+}
+.main-btn li button{
+    width:100%;
+    height: 0.6rem;
+    font-size: 0.3rem;
+    -webkit-border-radius: 0.15rem;
+    -moz-border-radius: 0.15rem;
+    border-radius: 0.15rem;
+}
+
+
+/*签到记录*/
+.record{
+    font-size:0.3rem;
+}
+.record .sign-record-title{
+    color: #666666;
+}
+.record li:first-child{
+    padding:0.4rem 0 0.2rem 0.5rem;
+    font-size: 0.35rem;
+}
+.record li{
+    border-bottom:1px solid #d2d2d2;}
+.record .serial-number{
+    width: 0.7rem;
+    height: 0.7rem;
+    font-size:0.3rem;
+    line-height:0.7rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin-top:0.05rem;
+
+}
+.record .record-tx{
+    padding:0 0.2rem;
+}
+.record .record-tx strong{
+    font-size:0.3rem;
+    color: #747474;
+}
+.record .record-tx p{
+    font-size:0.25rem;
+    margin-top:0.1rem;
+    color: #999999;
+}
+.record .btn{
+    margin-top:0.06rem;
+    padding:0 0.35rem;
+    height: 0.7rem;
+    font-size:0.3rem;
+}
+.record .signed{
+    color: #f0ad4e;
 }
