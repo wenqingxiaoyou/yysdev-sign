@@ -1,0 +1,27 @@
+/*默认按钮背景色*/
+.bg-default{
+    background-color: #eb6100;
+}
+/*灰色状态背景色*/
+.bg-gray{
+    background-color: #dce5ea;
+}
+/*操作成功的按钮背景色*/
+.bg-success{
+    background-color: #5cb85c;
+}
+/*提示信息的按钮背景色*/
+.bg-warning{
+    background-color: #f0ad4e;
+}
+
+/*通知信息的按钮背景色*/
+.bg-info{
+    background-color: #5bc0de;
+}
+
+/*文本居中*/
+
+.txt-center{
+    text-align: center;
+}

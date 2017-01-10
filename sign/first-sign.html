@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我要签到</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/libyys-flexible.js"></script>
+    <style>
+        .banner{
+            width: 100%;
+            height: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .banner img{
+
+            height:auto;
+        }
+
+        .banner .mask-title{
+            width: 100%;
+            position: absolute;
+            height: 0.7rem;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.25);
+            color: #ffffff;
+            line-height: 0.7rem;
+            font-size:0.3rem;
+            text-align: center;
+            padding:0 0.25rem;
+        }
+        .user-wrap{
+            width:100%;
+            position: relative;
+            background-color: #ffffff;
+            text-align: center;
+            overflow: hidden;
+            height: 3.5rem;
+        }
+        .user-wrap .user-img{
+            width: 1.2rem;
+            height: 1.2rem;
+            margin:0.35rem auto 0.2rem auto;
+            background-color: #dddddd;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            overflow: hidden;
+
+        }
+        .user-wrap .user-name{
+            color: #a4a4a4;
+            font-size:0.3rem;
+        }
+        .sign-btn{
+            width: 4.5rem;
+            height: 0.8rem;
+            position: absolute;
+            left: 50%;
+            bottom: 0.2rem;
+            color: #ffffff;
+            font-size:0.45rem;
+            -webkit-transform: translate(-50%, 0);
+            -moz-transform: translate(-50%, 0);
+            -ms-transform: translate(-50%, 0);
+            -o-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+            -webkit-border-radius: 0.15rem;
+            -moz-border-radius: 0.15rem;
+            border-radius: 0.15rem;
+        }
+
+        /*活动规则*/
+        .sign-ruler{
+            margin: 0.2rem 0;
+            background-color: #ffffff;
+            font-size:0.26rem;
+            padding:0.2rem 0.35rem;
+        }
+        .sign-ruler .ruler-title{
+            color: #000;
+            font-size: 0.36rem;
+        }
+        .sign-ruler p{
+            line-height: 0.45rem;
+        }
+
+        
+        
+
+    </style>
+</head>
+<body class="scope">
+<section class="banner">
+    <img src="images/banner.jpg" alt="">
+    <div class="mask-title">
+        <h1 class="h1-title">2017签到领取iPhone7sPlus</h1>
+       <!-- <span class="fl">03天</span>
+        <span class="fr">签到领取iPhone7sPlus</span>-->
+    </div>
+</section>
+
+<section class="user-wrap">
+    <div class="user-img">
+        <img src="images/bee.png" alt="">
+    </div>
+    <p class="user-name">文清笑游</p>
+    <button class="sign-btn bg-default">我要签到</button>
+</section>
+<section class="cpd sign-ruler">
+    <h2 class="ruler-title txt-center">活动规则</h2>
+    <p>1.规则1</p>
+    <p>2.规则2</p>
+    <p>3.规则3</p>
+    <p>4.规则4</p>
+    <p>5.规则5</p>
+    <p>6.规则6</p>
+    <p>7.规则7</p>
+</section>
+</body>
+</html>
