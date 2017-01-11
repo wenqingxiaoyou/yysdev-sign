@@ -37,7 +37,6 @@ button{
     text-align: center;
 }
 
-
 /*banner 样式*/
 .banner{
     width: 100%;
@@ -151,8 +150,6 @@ button{
     position: relative;
 }
 
-
-
 /*参加数量以及用户头像*/
 .part-num{
     color: #000000;
@@ -172,7 +169,7 @@ button{
     margin-bottom:0.15rem;
 }
 
-/*按钮*/
+/*主题按钮*/
 .main-btn{
     padding-top: 0;
 }
@@ -189,7 +186,6 @@ button{
     -moz-border-radius: 0.15rem;
     border-radius: 0.15rem;
 }
-
 
 /*签到记录*/
 .record{
