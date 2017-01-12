@@ -6,14 +6,21 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <script src="js/libyys-flexible.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/layer_mobile/layer.js"></script>
+
 </head>
 <body class="scope">
+<script>
+    layer.open({
+        type: 2,
+        content: '加载中'
+    });
+</script>
 <section class="banner">
     <img src="images/banner.jpg" alt="">
     <div class="mask-title">
         <h1 class="h1-title">2017签到领取iPhone7sPlus</h1>
-       <!-- <span class="fl">03天</span>
-        <span class="fr">签到领取iPhone7sPlus</span>-->
     </div>
 </section>
 
@@ -22,8 +29,10 @@
         <img src="images/bee.png" alt="">
     </div>
     <p class="user-name">文清笑游</p>
-    <button class="sign-btn bg-default">我要签到</button>
+    <button class="sign-btn bg-default" onclick="location.href='index.html'">我要签到</button>
 </section>
+
+
 <section class="cpd sign-ruler">
     <h2 class="ruler-title txt-center">活动规则</h2>
     <p>1.规则1</p>
@@ -34,5 +43,12 @@
     <p>6.规则6</p>
     <p>7.规则7</p>
 </section>
+<script>
+    window.onload=function () {
+        setTimeout(function () {
+            layer.closeAll();
+        },1000);
+    };
+</script>
 </body>
 </html>

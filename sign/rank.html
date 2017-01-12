@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>排行首页</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/libyys-flexible.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/layer_mobile/layer.js"></script>
+</head>
+<body class="scope">
+<script>
+    layer.open({
+        type: 2,
+        content: '加载中'
+    });
+</script>
+<section class="banner">
+    <img src="images/banner.jpg" alt="">
+    <div class="mask-title">
+        <span class="fl">03天</span>
+        <span class="fr">签到领取iPhone7sPlus</span>
+    </div>
+</section>
+<section class="user-wrap rank">
+    <div class="user-img">
+        <img src="images/bee.png" alt="">
+    </div>
+    <p class="user-name">文清笑游</p>
+    <p class="rank-name"><span class="fl rank-num">NO.1 </span><span class="fr rank-time">2017/10/12</span></p>
+    <ul class="rank-wrap bg-default clearfix">
+        <li>
+            <p>打卡时间</p>
+            <span>22:54</span>
+        </li>
+        <li onclick="location.href='calendar.html'">
+            <p>总排名</p>
+            <span>22054</span>
+        </li>
+        <li>
+            <p>好友排名</p>
+            <span>24</span>
+        </li>
+    </ul>
+    <button class="friend-btn btn bg-default" onclick="location.href='person-integral.html'">好友互动</button>
+</section>
+<section class="friend bg-white">
+    <ul class="clearfix">
+        <li>
+            <div class="fd-num fl">2</div>
+            <div class="fd-img fl"><img src="images/friend-header.png" alt=""></div>
+            <div class="fd-name fl">文清笑游</div>
+            <div class="fd-time fr color-default">22:22</div>
+        </li>
+        <li>
+            <div class="fd-num fl">2</div>
+            <div class="fd-img fl"><img src="images/friend-header.png" alt=""></div>
+            <div class="fd-name fl">文清笑游</div>
+            <div class="fd-time fr color-default">22:22</div>
+        </li>
+        <li>
+            <div class="fd-num fl">2</div>
+            <div class="fd-img fl"><img src="images/friend-header.png" alt=""></div>
+            <div class="fd-name fl">文清笑游</div>
+            <div class="fd-time fr color-default">22:22</div>
+        </li>
+        <li>
+            <div class="fd-num fl">2</div>
+            <div class="fd-img fl"><img src="images/friend-header.png" alt=""></div>
+            <div class="fd-name fl">文清笑游</div>
+            <div class="fd-time fr color-default">22:22</div>
+        </li>
+    </ul>
+</section>
+<script>
+    window.onload=function () {
+        setTimeout(function () {
+            layer.closeAll();
+        },1000);
+    };
+</script>
+</body>
+</html>

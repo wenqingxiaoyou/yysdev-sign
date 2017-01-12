@@ -2,12 +2,20 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>我要签到</title>
+    <title>签到记录</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <script src="js/libyys-flexible.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/layer_mobile/layer.js"></script>
 </head>
 <body class="scope">
+<script>
+    layer.open({
+        type: 2,
+        content: '加载中'
+    });
+</script>
 <section class="banner">
     <img src="images/banner.jpg" alt="">
     <div class="mask-title">
@@ -37,7 +45,7 @@
 </div>
 <div class="model-content main-btn">
     <ul class="clearfix">
-        <li><button class="bg-default">我的主页</button></li>
+        <li><button class="bg-default" onclick="location.href='rank.html'">我的主页</button></li>
         <li><button class="bg-default">炫耀一下</button></li>
         <li><button class="bg-default">积分商城</button></li>
     </ul>
@@ -104,8 +112,22 @@
         </li>
     </ul>
 </section>
-<script src="js/jquery-3.1.1.min.js"></script>
+
 <script>
+    window.onload=function () {
+
+        setTimeout(function () {
+            layer.closeAll();
+        },1000);
+            $('.record').on('click',function () {
+                layer.open({
+                    content: '签到成功',
+                    btn: '关闭'
+                });
+            })
+    };
+
+
     showRuler();
     function showRuler() {
         var btn = false;
@@ -121,6 +143,22 @@
 
         });
     }
+
+
 </script>
+<style>
+
+    .layui-m-layermain  .layui-m-layercont,.layui-m-layermain  .layui-m-layerbtn{
+        font-size:0.3rem;
+    }
+    .layui-m-layerbtn{
+        padding:0.1rem 0;
+    }
+    .layui-m-layerbtn span[yes] {
+        color: #40AFFE;
+        font-size:0.3rem;
+
+    }
+</style>
 </body>
 </html>
