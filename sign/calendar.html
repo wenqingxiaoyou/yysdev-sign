@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>日历</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
+    <script src="js/libyys-flexible.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/layer_mobile/layer.js"></script>
+    <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+    <style>
+
+    </style>
+</head>
+<body class="scope">
+<script>
+    layer.open({
+        type: 2,
+        content: '加载中'
+    });
+</script>
+<section class="calendar-top bg-default">
+    <div type="text" class="cal-txt bg-default" id="datepicker"></div>
+    <span class="cal-time">今天</span>
+</section>
+<section class="cal-list-wrap">
+    <ul class="cal-list">
+        <li onclick="location.href='rank-day.html'">
+            <div class="model-content bg-gray cal-list-time">01月01日 <span>周日</span></div>
+            <div class="cal-list-txt">签到计划，23天早起，第14天</div>
+        </li>
+        <li onclick="location.href='rank-day.html'">
+            <div class="model-content bg-gray cal-list-time">01月01日 <span>周日</span></div>
+            <div class="cal-list-txt">签到计划，23天早起，第14天</div>
+        </li>
+        <li onclick="location.href='rank-day.html'">
+            <div class="model-content bg-gray cal-list-time">01月01日 <span>周日</span></div>
+            <div class="cal-list-txt">签到计划，23天早起，第14天</div>
+        </li>
+    </ul>
+</section>
+<script>
+    Date.prototype.format = function(fmt) {
+        var o = {
+            "M+" : this.getMonth()+1,                 //月份
+            "d+" : this.getDate(),                    //日
+            "h+" : this.getHours(),                   //小时
+            "m+" : this.getMinutes(),                 //分
+            "s+" : this.getSeconds(),                 //秒
+            "q+" : Math.floor((this.getMonth()+3)/3), //季度
+            "S"  : this.getMilliseconds()             //毫秒
+        };
+        if(/(y+)/.test(fmt)) {
+            fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));
+        }
+        for(var k in o) {
+            if(new RegExp("("+ k +")").test(fmt)){
+                fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));
+            }
+        }
+        return fmt;
+    };
+    $( function() {
+        $('.cal-txt').text(new Date().format("yyyy-MM"));
+    } );
+    window.onload=function () {
+        setTimeout(function () {
+            layer.closeAll();
+        },1000);
+    };
+</script>
+</body>
+</html>

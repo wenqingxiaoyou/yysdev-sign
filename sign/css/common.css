@@ -1,6 +1,25 @@
+.model-content{
+    padding:0.2rem 0.3rem;
+    background-color: #ffffff;
+    position: relative;
+}
+/*按钮*/
+button{
+    -webkit-border-radius: 0.12rem;
+    -moz-border-radius: 0.12rem;
+    border-radius: 0.12rem;
+}
+[class ^= "bg-"]{
+    color: #ffffff;
+}
+/*白色背景*/
+.bg-white{
+    background-color: #ffffff;
+}
 /*默认按钮背景色*/
 .bg-default{
     background-color: #eb6100;
+    color: #ffffff;
 }
 /*灰色状态背景色*/
 .bg-gray{
@@ -14,19 +33,18 @@
 .bg-warning{
     background-color: #f0ad4e;
 }
-
 /*通知信息的按钮背景色*/
 .bg-info{
     background-color: #5bc0de;
 }
-
 /*文本居中*/
-
 .txt-center{
     text-align: center;
 }
 
-
+.color-default{
+    color: #eb6100;
+}
 /*banner 样式*/
 .banner{
     width: 100%;
@@ -35,7 +53,7 @@
     overflow: hidden;
 }
 .banner img{
-
+    width: 100%;
     height:auto;
 }
 .banner .mask-title{
@@ -60,6 +78,12 @@
     overflow: hidden;
     height: 3.5rem;
 }
+.user-wrap.rank{
+
+    height: auto;
+    display: table;
+}
+
 .user-wrap .user-img{
     width: 1.2rem;
     height: 1.2rem;
@@ -74,6 +98,40 @@
 .user-wrap .user-name{
     color: #a4a4a4;
     font-size:0.3rem;
+}
+
+/*排名的样式*/
+.user-wrap .rank-wrap{
+    width:100%;
+    height: 1.5rem;
+    text-align: left;
+    overflow: hidden;
+}
+.user-wrap .rank-wrap li{
+    float: left;
+    width: 33.33333%;
+    text-align: center;
+    font-size:0.35rem;
+    line-height:0.7rem;
+}
+.user-wrap .rank-name{
+    color: #eb6100;
+    font-size:0.35rem;
+    margin-top:-0.45rem;
+    padding:0 0.3rem 0.5rem 0.3rem;
+}
+.user-wrap .rank-name .rank-num{
+    font-size:0.35rem;
+    font-weight: bold;
+}
+.user-wrap .rank-name .rank-time{
+    font-size:0.25rem;
+    margin-top:0.1rem;
+}
+.friend-btn{
+    padding:0.2rem 0.45rem;
+    font-size:0.3rem;
+    margin-top:0.2rem;
 }
 .sign-btn{
     width: 4.5rem;
@@ -98,11 +156,342 @@
     background-color: #ffffff;
     font-size:0.26rem;
     padding:0.2rem 0.35rem;
+    position: relative;
 }
 .sign-ruler .ruler-title{
     color: #000;
     font-size: 0.36rem;
+    position: relative;
 }
 .sign-ruler p{
     line-height: 0.45rem;
+}
+.sign-ruler .triangle-wrap{
+    width: 0.4rem;
+    height: 0.4rem;
+    color: #ffffff;
+    margin: 0 auto;
+    position: relative;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.sign-ruler .triangle-wrap .triangle{
+    display: block;
+    height:0;
+    width:0;
+    border-left: 0.12rem solid transparent;
+    border-right: 0.12rem solid transparent;
+    border-top: 0.12rem solid #ffffff;
+    position: absolute;
+    left:50%;
+    top:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+/*参加数量以及用户头像*/
+.part-num{
+    color: #000000;
+    font-size: 0.25rem;
+}
+.user-small-pic{
+    padding-top:0;
+    padding-bottom: 0.05rem;
+}
+.user-small-pic li{
+    float: left;
+    width:0.57rem;
+    height:0.57rem;
+    overflow: hidden;
+    border-radius:0.1rem;
+    margin-right:0.13rem;
+    margin-bottom:0.15rem;
+}
+
+/*主题按钮*/
+.main-btn{
+    padding-top: 0;
+}
+.main-btn li{
+    float: left;
+    width:33.3333%;
+    padding:0 0.12rem;
+}
+.main-btn li button{
+    width:100%;
+    height: 0.6rem;
+    font-size: 0.3rem;
+    -webkit-border-radius: 0.15rem;
+    -moz-border-radius: 0.15rem;
+    border-radius: 0.15rem;
+}
+
+/*签到记录*/
+.record{
+    font-size:0.3rem;
+}
+.record .sign-record-title{
+    color: #666666;
+}
+.record li:first-child{
+    padding:0.4rem 0 0.2rem 0.5rem;
+    font-size: 0.35rem;
+}
+.record li{
+    border-bottom:1px solid #d2d2d2;}
+.record .serial-number{
+    width: 0.7rem;
+    height: 0.7rem;
+    font-size:0.3rem;
+    line-height:0.7rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin-top:0.05rem;
+
+}
+.record .record-tx{
+    padding:0 0.2rem;
+}
+.record .record-tx strong{
+    font-size:0.3rem;
+    color: #747474;
+}
+.record .record-tx p{
+    font-size:0.25rem;
+    margin-top:0.1rem;
+    color: #999999;
+}
+.record .btn{
+    margin-top:0.06rem;
+    padding:0 0.35rem;
+    height: 0.7rem;
+    font-size:0.3rem;
+}
+.record .signed{
+    color: #f0ad4e;
+}
+
+/*朋友排行*/
+.friend{
+    font-size:0.35rem;
+}
+.friend li{
+    padding:0 0.3rem;
+    height: 1rem;
+    border-bottom:1px solid #d2d2d2;
+    line-height:1rem;
+    color: #000000;
+}
+.friend .fd-num{}
+.friend .fd-img{
+    margin-top:0.14rem;
+    width: 0.72rem;
+    height: 0.72rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin:0.14rem 0.3rem 0 0.3rem;
+
+}
+.friend .fd-name{
+    font-size:0.3rem;
+}
+.friend .fd-time{
+    font-weight:bold;
+}
+
+/*个人积分用户参加活动信息*/
+.user-wrap.per-int{
+    height:auto;
+    text-align: left;
+}
+.user-wrap.per-int .user-img{
+    margin:0;
+}
+.user-wrap.per-int .part-info{
+    font-size:0.3rem;
+    padding-left:0.2rem;
+    color: #000;
+}
+.user-wrap.per-int .user-name{
+    color: #000;
+    font-weight: bold;
+    font-size:0.25rem;
+}
+
+/*个人积分*/
+.user-int{
+    border-top:1px solid #dcdcdc;
+    border-bottom:1px solid #dcdcdc;
+    font-size:0.3rem;
+
+}
+.user-int .int-num{
+    font-size:0.35rem;
+    font-weight: bold;
+    line-height:0.5rem;
+}
+.operator {
+    margin-top: 0.2rem;
+}
+.operator span{
+    display: block;
+    height: 0.8rem;
+    margin-top:0.1rem;
+    padding:0 0.15rem;
+    background-color: #ff8418;
+    font-size:0.3rem;
+    font-weight:normal;
+    border-left:1px solid #ffffff;
+    line-height: 0.8rem;
+    color: #ffffff;
+}
+.operator li{
+    padding:0;
+}
+
+/*签到日期时间列表*/
+.calendar-top{
+    height: 0.6rem;
+    overflow: hidden;
+    position: relative;
+
+}
+.cal-txt{
+    display: block;
+    text-align: center;
+    width:1.85rem;
+    padding:0 0.2rem;
+    line-height:0.4rem;
+    height: 0.4rem;
+    margin:0.1rem auto;
+    color: #ffffff;
+    font-size:0.3rem;
+    position: relative;
+}
+.cal-txt:after{
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 0.15rem solid transparent;
+    border-right: 0.2rem solid #ffffff;
+    border-bottom: 0.15rem solid transparent;
+    position: absolute;
+    left: -0.08rem;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+.cal-txt:before{
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 0.15rem solid transparent;
+    border-left: 0.2rem solid #ffffff;
+    border-bottom: 0.15rem solid transparent;
+    position: absolute;
+    right: -0.08rem;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+.calendar-top .cal-time{
+    position: absolute;
+    color: #ffffff;
+    right: 0.3rem;
+    top:50%;
+    font-size:0.25rem;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+.cal-list-wrap{
+    overflow: hidden;
+    font-size:0.25rem;
+}
+.cal-list-wrap li{
+    width:100%;
+}
+.cal-list-wrap .cal-list-time{
+    color: #000;
+    font-size:0.25rem;
+}
+.cal-list-wrap .cal-list-txt{
+    position: relative;
+    padding:0.3rem 0 0.3rem 0.8rem;
+    font-size:0.3rem;
+    border-top:1px solid #e2e3e5;
+    border-bottom:1px solid #e2e3e5;
+    background:url("../images/star.png") no-repeat 0.3rem center #ffffff;
+}
+.cal-list-wrap .cal-list-txt:after{
+
+    display: block;
+    content: '';
+    width:0.08rem;
+    height:0.45rem;
+    background-color: #ff9c05;
+    position: absolute;
+    left:0;
+    top:50%;
+    -webkit-transform: translate(0,-50%);
+    -moz-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+
+}
+
+
+/*某一天的具体排行信息*/
+.rank-day .banner{
+    height: auto;
+    margin-bottom: 0.2rem;
+}
+.rank-day .friend li{
+    padding-right: 1.2rem;
+    position: relative;
+}
+.rank-day .banner .friend li{
+    padding-right: 1.2rem;
+    padding-left:0.5rem;
+
+}
+.rank-day .friend .like-wrap{
+    position: absolute;
+    right: 0;
+    height:1rem;
+    background: url("../images/heart.png") no-repeat center 0.56rem;
+    -webkit-background-size:0.32rem 0.3rem;
+    background-size:0.32rem 0.3rem;
+    padding:0 0.2rem;
+    line-height: 0.6rem;
+    color: #b4b4b4;
+
+}
+.rank-day .friend .like-wrap.active{
+    background: url("../images/hear-acitve.png") no-repeat center 0.56rem;
+    -webkit-background-size:0.32rem 0.3rem;
+    background-size:0.32rem 0.3rem;
+}
+.rank-day .banner .friend .fd-name{
+    padding:0.1rem 0;
+    line-height:0.4rem;
+    font-size:0.25rem;
 }

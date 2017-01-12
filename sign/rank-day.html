@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>某天的排行详情页</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/libyys-flexible.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/layer_mobile/layer.js"></script>
+</head>
+<body class="scope rank-day">
+<script>
+    layer.open({
+        type: 2,
+        content: '加载中'
+    });
+</script>
+<section class="banner bg-white">
+    <img src="images/banner.jpg" alt="">
+    <section class="friend bg-white">
+        <ul class="clearfix">
+            <li>
+                <div class="fd-img fl"><img src="images/friend-header.png" alt=""></div>
+                <div class="fd-name fl">
+                    <p>文清笑游</p>
+                    <p class="color-default">第一名</p>
+                </div>
+                <div class="fd-time fr color-default">123</div>
+                <div class="like-wrap active">
+                    <span>20</span>
+                </div>
+            </li>
+        </ul>
+    </section>
+</section>
+<section class="friend bg-white">
+    <ul class="clearfix">
+        <li>
+            <div class="fd-num fl">1</div>
+            <div class="fd-img fl"><img src="images/friend-header.png" alt=""></div>
+            <div class="fd-name fl">文清笑游</div>
+            <div class="fd-time fr color-default">22:22</div>
+            <div class="like-wrap">
+                <span>20</span>
+            </div>
+        </li>
+        <li>
+            <div class="fd-num fl">2</div>
+            <div class="fd-img fl"><img src="images/friend-header.png" alt=""></div>
+            <div class="fd-name fl">文清笑游</div>
+            <div class="fd-time fr color-default">22:22</div>
+            <div class="like-wrap active">
+                <span>20</span>
+            </div>
+        </li>
+        <li>
+            <div class="fd-num fl">3</div>
+            <div class="fd-img fl"><img src="images/friend-header.png" alt=""></div>
+            <div class="fd-name fl">文清笑游</div>
+            <div class="fd-time fr color-default">22:22</div>
+            <div class="like-wrap">
+                <span>20</span>
+            </div>
+        </li>
+        <li>
+            <div class="fd-num fl">4</div>
+            <div class="fd-img fl"><img src="images/friend-header.png" alt=""></div>
+            <div class="fd-name fl">文清笑游</div>
+            <div class="fd-time fr color-default">22:22</div>
+            <div class="like-wrap active">
+                <span>20</span>
+            </div>
+        </li>
+    </ul>
+</section>
+<script>
+    window.onload=function () {
+        setTimeout(function () {
+            layer.closeAll();
+        },1000);
+        $('.like-wrap').click(function () {
+
+            if($(this).hasClass('active')){
+                //取消点赞
+                $(this).removeClass('active');
+                layer.open({
+                    content: '取消点赞',
+                    skin: 'msg',
+                    time: 2 //2秒后自动关闭
+                });
+
+            }else{
+                //点赞
+                $(this).addClass('active');
+                layer.open({
+                    content: '点赞成功!'
+                    ,skin: 'msg'
+                    ,time: 2 //2秒后自动关闭
+                });
+
+            }
+
+        })
+    };
+
+</script>
+</body>
+</html>

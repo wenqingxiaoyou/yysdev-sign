@@ -116,7 +116,7 @@ input:password {
 
 .scope {
     min-width: 320px;
-    max-width: 640px;
+    max-width: 750px;
     margin: 0 auto;
     font-size:0.25rem;
     background-color: #eeeeee;
