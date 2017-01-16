@@ -28,7 +28,7 @@
         <img src="images/bee.png" alt="">
     </div>
     <p class="user-name">文清笑游</p>
-    <p class="rank-name"><span class="fl rank-num">NO.1 </span><span class="fr rank-time">2017/10/12</span></p>
+    <p class="rank-name"><span class="fl rank-num color-default">NO.1 </span><span class="fr color-default rank-time">2017/10/12</span></p>
     <ul class="rank-wrap bg-default clearfix">
         <li>
             <p>打卡时间</p>
@@ -43,41 +43,136 @@
             <span>24</span>
         </li>
     </ul>
-    <button class="friend-btn btn bg-default" onclick="location.href='person-integral.html'">好友互动</button>
+    <section class="model-content color-default clearfix user-int">
+        <div class="fl">
+            <p>个人积分：<span class="int-num">3000</span></p>
+        </div>
+        <div class="fr">
+            <p>关注数：<span class="int-num">36</span></p>
+        </div>
+    </section>
 </section>
-<section class="friend bg-white">
+
+<section class="rank-day">
+    <section class="friend f-link bg-white">
+        <ul class="clearfix">
+            <li>
+                <div class="fd-num fl">1</div>
+                <div class="fd-img fl"><img src="images/friend-header.png" alt=""></div>
+                <div class="fd-name fl">文清笑游</div>
+                <div class="fd-time fr color-default">22:22</div>
+                <div class="like-wrap">
+                    <span>20</span>
+                </div>
+            </li>
+            <li>
+                <div class="fd-num fl">2</div>
+                <div class="fd-img fl"><img src="images/friend-header.png" alt=""></div>
+                <div class="fd-name fl">文清笑游</div>
+                <div class="fd-time fr color-default">22:22</div>
+                <div class="like-wrap active">
+                    <span>20</span>
+                </div>
+            </li>
+            <li>
+                <div class="fd-num fl">3</div>
+                <div class="fd-img fl"><img src="images/friend-header.png" alt=""></div>
+                <div class="fd-name fl">文清笑游</div>
+                <div class="fd-time fr color-default">22:22</div>
+                <div class="like-wrap">
+                    <span>20</span>
+                </div>
+            </li>
+            <li>
+                <div class="fd-num fl">4</div>
+                <div class="fd-img fl"><img src="images/friend-header.png" alt=""></div>
+                <div class="fd-name fl">文清笑游</div>
+                <div class="fd-time fr color-default">22:22</div>
+                <div class="like-wrap active">
+                    <span>20</span>
+                </div>
+            </li>
+        </ul>
+    </section>
+</section>
+<section class="friend operator bg-white">
     <ul class="clearfix">
         <li>
             <div class="fd-num fl">2</div>
             <div class="fd-img fl"><img src="images/friend-header.png" alt=""></div>
             <div class="fd-name fl">文清笑游</div>
-            <div class="fd-time fr color-default">22:22</div>
+
+            <div class="fd-time w-bg   clearfix fr">
+                <span class="fl"></span>
+            </div>
+            <div class="fd-time warning fr color-default">未签到</div>
+
         </li>
         <li>
             <div class="fd-num fl">2</div>
             <div class="fd-img fl"><img src="images/friend-header.png" alt=""></div>
             <div class="fd-name fl">文清笑游</div>
-            <div class="fd-time fr color-default">22:22</div>
+
+            <div class="fd-time w-bg  clearfix fr">
+                <span class="fl"></span>
+            </div>
+            <div class="fd-time warning fr color-default">未签到</div>
+
         </li>
+
         <li>
             <div class="fd-num fl">2</div>
             <div class="fd-img fl"><img src="images/friend-header.png" alt=""></div>
             <div class="fd-name fl">文清笑游</div>
-            <div class="fd-time fr color-default">22:22</div>
-        </li>
-        <li>
-            <div class="fd-num fl">2</div>
-            <div class="fd-img fl"><img src="images/friend-header.png" alt=""></div>
-            <div class="fd-name fl">文清笑游</div>
-            <div class="fd-time fr color-default">22:22</div>
+
+            <div class="fd-time w-bg active  clearfix fr">
+                <span class="fl"></span>
+            </div>
+            <div class="fd-time warning fr color-default">未签到</div>
+
         </li>
     </ul>
 </section>
+
+
+
 <script>
     window.onload=function () {
-        setTimeout(function () {
-            layer.closeAll();
-        },1000);
+        layer.closeAll();
+
+
+
+        $('.like-wrap').click(function () {
+            if($(this).hasClass('active')){
+
+
+            }else{
+                //点赞
+                $(this).addClass('active');
+                layer.open({
+                    content: '点赞成功!'
+                    ,skin: 'msg'
+                    ,time: 2 //2秒后自动关闭
+                });
+
+            }
+
+        })
+
+        $('.operator .w-bg').click(function () {
+            if($(this).hasClass('active')){
+            }else{
+                //点赞
+                $(this).addClass('active');
+                layer.open({
+                    content: '提醒成功!'
+                    ,skin: 'msg'
+                    ,time: 2 //2秒后自动关闭
+                });
+
+            }
+
+        })
     };
 </script>
 </body>

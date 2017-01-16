@@ -18,7 +18,7 @@
 </script>
 <section class="banner bg-white">
     <img src="images/banner.jpg" alt="">
-    <section class="friend bg-white">
+    <section class="friend no-heart bg-white">
         <ul class="clearfix">
             <li>
                 <div class="fd-img fl"><img src="images/friend-header.png" alt=""></div>
@@ -27,78 +27,66 @@
                     <p class="color-default">第一名</p>
                 </div>
                 <div class="fd-time fr color-default">123</div>
-                <div class="like-wrap active">
-                    <span>20</span>
-                </div>
             </li>
         </ul>
     </section>
 </section>
-<section class="friend bg-white">
+
+
+<section class="friend no-heart bg-white">
     <ul class="clearfix">
         <li>
             <div class="fd-num fl">1</div>
             <div class="fd-img fl"><img src="images/friend-header.png" alt=""></div>
             <div class="fd-name fl">文清笑游</div>
-            <div class="fd-time fr color-default">22:22</div>
-            <div class="like-wrap">
-                <span>20</span>
-            </div>
+            <div class="fd-time fr color-default">234</div>
         </li>
         <li>
-            <div class="fd-num fl">2</div>
+            <div class="fd-num fl">1</div>
             <div class="fd-img fl"><img src="images/friend-header.png" alt=""></div>
             <div class="fd-name fl">文清笑游</div>
-            <div class="fd-time fr color-default">22:22</div>
-            <div class="like-wrap active">
-                <span>20</span>
-            </div>
+            <div class="fd-time fr color-default">234</div>
         </li>
         <li>
-            <div class="fd-num fl">3</div>
+            <div class="fd-num fl">1</div>
             <div class="fd-img fl"><img src="images/friend-header.png" alt=""></div>
             <div class="fd-name fl">文清笑游</div>
-            <div class="fd-time fr color-default">22:22</div>
-            <div class="like-wrap">
-                <span>20</span>
-            </div>
+            <div class="fd-time fr color-default">234</div>
         </li>
         <li>
-            <div class="fd-num fl">4</div>
+            <div class="fd-num fl">1</div>
             <div class="fd-img fl"><img src="images/friend-header.png" alt=""></div>
             <div class="fd-name fl">文清笑游</div>
-            <div class="fd-time fr color-default">22:22</div>
-            <div class="like-wrap active">
-                <span>20</span>
-            </div>
+            <div class="fd-time fr color-default">234</div>
+        </li>
+        <li>
+            <div class="fd-num fl">1</div>
+            <div class="fd-img fl"><img src="images/friend-header.png" alt=""></div>
+            <div class="fd-name fl">文清笑游</div>
+            <div class="fd-time fr color-default">234</div>
         </li>
     </ul>
 </section>
+
+<style>
+    #layui-m-layer5 .layui-m-layersection .layui-m-layercont{
+        font-size: 0.3rem;
+    }
+</style>
+
 <script>
-    window.onload=function () {
-        setTimeout(function () {
-            layer.closeAll();
-        },1000);
+    window.onload = function () {
+        layer.closeAll();
         $('.like-wrap').click(function () {
-
-            if($(this).hasClass('active')){
-                //取消点赞
-                $(this).removeClass('active');
-                layer.open({
-                    content: '取消点赞',
-                    skin: 'msg',
-                    time: 2 //2秒后自动关闭
-                });
-
-            }else{
+            if ($(this).hasClass('active')) {
+            } else {
                 //点赞
                 $(this).addClass('active');
                 layer.open({
                     content: '点赞成功!'
-                    ,skin: 'msg'
-                    ,time: 2 //2秒后自动关闭
+                    , skin: 'msg'
+                    , time: 2 //2秒后自动关闭
                 });
-
             }
 
         })

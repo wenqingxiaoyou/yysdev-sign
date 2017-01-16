@@ -12,13 +12,14 @@ button{
 [class ^= "bg-"]{
     color: #ffffff;
 }
+
 /*白色背景*/
 .bg-white{
     background-color: #ffffff;
 }
 /*默认按钮背景色*/
 .bg-default{
-    background-color: #eb6100;
+    background-color: #f19000;
     color: #ffffff;
 }
 /*灰色状态背景色*/
@@ -43,7 +44,19 @@ button{
 }
 
 .color-default{
-    color: #eb6100;
+    color: #f19000;
+}
+.color-white{
+    color: #ffffff;
+}
+.color-info{
+    color: #000;
+}
+.color-gray{
+    color: #dce5ea;
+}
+.color-success{
+    color: #5cb85c;
 }
 /*banner 样式*/
 .banner{
@@ -96,7 +109,7 @@ button{
 
 }
 .user-wrap .user-name{
-    color: #a4a4a4;
+    color: #666;
     font-size:0.3rem;
 }
 
@@ -111,8 +124,11 @@ button{
     float: left;
     width: 33.33333%;
     text-align: center;
-    font-size:0.35rem;
-    line-height:0.7rem;
+    font-size:0.3rem;
+    line-height:0.6rem;
+}
+.user-wrap .rank-wrap li p{
+    margin-top:0.15rem;
 }
 .user-wrap .rank-name{
     color: #eb6100;
@@ -157,10 +173,13 @@ button{
     font-size:0.26rem;
     padding:0.2rem 0.35rem;
     position: relative;
+    border-bottom:1px solid #e5e5e5;
+    border-top:1px solid #e5e5e5;
+
 }
 .sign-ruler .ruler-title{
-    color: #000;
-    font-size: 0.36rem;
+    color: #333;
+    font-size: 0.35rem;
     position: relative;
 }
 .sign-ruler p{
@@ -178,11 +197,11 @@ button{
 }
 .sign-ruler .triangle-wrap .triangle{
     display: block;
-    height:0;
-    width:0;
-    border-left: 0.12rem solid transparent;
-    border-right: 0.12rem solid transparent;
-    border-top: 0.12rem solid #ffffff;
+    height: 0.14rem;
+    width: 0.25rem;
+    background:url("../images/arrow-bottom.png") no-repeat center;
+    -webkit-background-size:0.25rem  0.14rem;
+    background-size:0.25rem  0.14rem;
     position: absolute;
     left:50%;
     top:50%;
@@ -193,15 +212,27 @@ button{
     transform: translate(-50%, -50%);
 }
 
-
+.sign-ruler .h3-title{
+    color: #333333;
+    font-size:0.3rem;
+}
+.sign-ruler .ruler-txt{
+    color: #666;
+    font-size:0.25rem;
+}
+.sign-ruler .ruler-txt p{
+    font-size:0.25rem;
+}
 /*参加数量以及用户头像*/
 .part-num{
-    color: #000000;
+    color: #666;
     font-size: 0.25rem;
 }
 .user-small-pic{
     padding-top:0;
-    padding-bottom: 0.05rem;
+    overflow: hidden;
+    height: 0.8rem;
+
 }
 .user-small-pic li{
     float: left;
@@ -209,18 +240,29 @@ button{
     height:0.57rem;
     overflow: hidden;
     border-radius:0.1rem;
-    margin-right:0.13rem;
-    margin-bottom:0.15rem;
+    margin:0.115rem 0.13rem 0.115rem 0;
+}
+.user-small-pic li img{
+    width: 0.57rem;
+    height: 0.57rem;
 }
 
 /*主题按钮*/
 .main-btn{
     padding-top: 0;
+    border-bottom:1px solid #e5e5e5;
+
 }
 .main-btn li{
     float: left;
-    width:33.3333%;
+    width:50%;
     padding:0 0.12rem;
+}
+.main-btn li:first-child{
+    padding-left:0;
+}
+.main-btn li:last-child{
+    padding-right:0;
 }
 .main-btn li button{
     width:100%;
@@ -234,6 +276,8 @@ button{
 /*签到记录*/
 .record{
     font-size:0.3rem;
+    border-top:1px solid #e5e5e5;
+
 }
 .record .sign-record-title{
     color: #666666;
@@ -243,7 +287,7 @@ button{
     font-size: 0.35rem;
 }
 .record li{
-    border-bottom:1px solid #d2d2d2;}
+    border-bottom:1px solid #e5e5e5;}
 .record .serial-number{
     width: 0.7rem;
     height: 0.7rem;
@@ -271,7 +315,7 @@ button{
     margin-top:0.06rem;
     padding:0 0.35rem;
     height: 0.7rem;
-    font-size:0.3rem;
+    font-size:0.25rem;
 }
 .record .signed{
     color: #f0ad4e;
@@ -284,11 +328,13 @@ button{
 .friend li{
     padding:0 0.3rem;
     height: 1rem;
-    border-bottom:1px solid #d2d2d2;
+    border-bottom:1px solid #e5e5e5;
     line-height:1rem;
     color: #000000;
 }
-.friend .fd-num{}
+.friend .fd-num{
+    color: #666666;
+}
 .friend .fd-img{
     margin-top:0.14rem;
     width: 0.72rem;
@@ -301,9 +347,11 @@ button{
 }
 .friend .fd-name{
     font-size:0.3rem;
+    color: #666666;
 }
 .friend .fd-time{
-    font-weight:bold;
+    font-size:0.25rem;
+
 }
 
 /*个人积分用户参加活动信息*/
@@ -334,27 +382,42 @@ button{
 }
 .user-int .int-num{
     font-size:0.35rem;
-    font-weight: bold;
     line-height:0.5rem;
 }
 .operator {
     margin-top: 0.2rem;
 }
-.operator span{
+
+.operator .fd-time{
+
+}
+.operator .fd-time span{
     display: block;
     height: 0.8rem;
+    width: 0.6rem;
     margin-top:0.1rem;
-    padding:0 0.15rem;
-    background-color: #ff8418;
+    background:url("../images/warnning.png") no-repeat center center;
+    -webkit-background-size:0.4rem 0.4rem;
+    background-size:0.4rem 0.4rem;
     font-size:0.3rem;
     font-weight:normal;
-    border-left:1px solid #ffffff;
     line-height: 0.8rem;
     color: #ffffff;
+
 }
-.operator li{
-    padding:0;
+.operator .warning{
+    margin-right: 0.3rem;
+    font-size: 0.25rem;
+    font-weight:normal;
+    color: #c8c8c8;
 }
+.operator .fd-time.active span{
+    background:url("../images/warnning-active.png") no-repeat center center;
+    -webkit-background-size:0.4rem 0.4rem;
+    background-size:0.4rem 0.4rem;
+
+}
+
 
 /*签到日期时间列表*/
 .calendar-top{
@@ -375,14 +438,10 @@ button{
     font-size:0.3rem;
     position: relative;
 }
-.cal-txt:after{
-    display: block;
-    content: '';
-    width: 0;
-    height: 0;
-    border-top: 0.15rem solid transparent;
-    border-right: 0.2rem solid #ffffff;
-    border-bottom: 0.15rem solid transparent;
+.cal-txt .arrow-left{
+    width: 0.14rem;
+    height: 0.25rem;
+    z-index: 999;
     position: absolute;
     left: -0.08rem;
     top: 50%;
@@ -391,15 +450,16 @@ button{
     -ms-transform: translate(0, -50%);
     -o-transform: translate(0, -50%);
     transform: translate(0, -50%);
+    background: url("../images/arrow-left.png") no-repeat center center;
+    background-size: 0.14rem 0.25rem;
 }
-.cal-txt:before{
-    display: block;
-    content: '';
-    width: 0;
-    height: 0;
-    border-top: 0.15rem solid transparent;
-    border-left: 0.2rem solid #ffffff;
-    border-bottom: 0.15rem solid transparent;
+.cal-txt .arrow-right{
+    z-index: 999;
+    width: 0.14rem;
+    height: 0.25rem;
+
+    background: url("../images/arrow-right.png") no-repeat center center;
+    background-size: 0.14rem 0.25rem;
     position: absolute;
     right: -0.08rem;
     top: 50%;
@@ -428,38 +488,33 @@ button{
 .cal-list-wrap li{
     width:100%;
 }
+.cal-list-wrap .active .cal-list-time{
+    color: #f19000;
+
+}
 .cal-list-wrap .cal-list-time{
-    color: #000;
+    color: #666;
     font-size:0.25rem;
+    background-color: #f1f7f7;
 }
 .cal-list-wrap .cal-list-txt{
     position: relative;
-    padding:0.3rem 0 0.3rem 0.8rem;
-    font-size:0.3rem;
-    border-top:1px solid #e2e3e5;
-    border-bottom:1px solid #e2e3e5;
-    background:url("../images/star.png") no-repeat 0.3rem center #ffffff;
+    padding:0.3rem 0 0.3rem 0.7rem;
+    font-size:0.25rem;
+    border-top:1px solid #e5e5e5;
+    border-bottom:1px solid #e5e5e5;
+    background:url("../images/star-more.png") no-repeat 0.15rem center #ffffff;
+    -webkit-background-size:0.41rem 0.43rem;
+    background-size:0.41rem 0.43rem;
+    color: #999;
 }
-.cal-list-wrap .cal-list-txt:after{
 
-    display: block;
-    content: '';
-    width:0.08rem;
-    height:0.45rem;
-    background-color: #ff9c05;
-    position: absolute;
-    left:0;
-    top:50%;
-    -webkit-transform: translate(0,-50%);
-    -moz-transform: translate(0,-50%);
-    -ms-transform: translate(0,-50%);
-    -o-transform: translate(0,-50%);
-    transform: translate(0,-50%);
-
-}
 
 
 /*某一天的具体排行信息*/
+.rank-day{
+    margin-bottom: 0.2rem;
+}
 .rank-day .banner{
     height: auto;
     margin-bottom: 0.2rem;
@@ -468,14 +523,21 @@ button{
     padding-right: 1.2rem;
     position: relative;
 }
+.rank-day .friend.no-heart li{
+    padding-right: 0.2rem;
+    position: relative;
+}
+.rank-day .banner .friend.no-heart li{
+    padding-right: 0.2rem;
+    padding-left:0.5rem;
+}
 .rank-day .banner .friend li{
     padding-right: 1.2rem;
     padding-left:0.5rem;
-
 }
 .rank-day .friend .like-wrap{
     position: absolute;
-    right: 0;
+    right: 0.2rem;
     height:1rem;
     background: url("../images/heart.png") no-repeat center 0.56rem;
     -webkit-background-size:0.32rem 0.3rem;
@@ -483,6 +545,7 @@ button{
     padding:0 0.2rem;
     line-height: 0.6rem;
     color: #b4b4b4;
+    font-size: 0.3rem;
 
 }
 .rank-day .friend .like-wrap.active{

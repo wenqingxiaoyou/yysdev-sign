@@ -5,14 +5,10 @@
     <title>日历</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
-    <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
     <script src="js/libyys-flexible.js"></script>
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/layer_mobile/layer.js"></script>
-    <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
-    <style>
 
-    </style>
 </head>
 <body class="scope">
 <script>
@@ -22,21 +18,25 @@
     });
 </script>
 <section class="calendar-top bg-default">
-    <div type="text" class="cal-txt bg-default" id="datepicker"></div>
+    <div type="text" class="cal-txt bg-default">
+        <div class="arrow-left"></div>
+        <span class="txt-time"></span>
+        <div class="arrow-right"></div>
+    </div>
     <span class="cal-time">今天</span>
 </section>
 <section class="cal-list-wrap">
     <ul class="cal-list">
         <li onclick="location.href='rank-day.html'">
-            <div class="model-content bg-gray cal-list-time">01月01日 <span>周日</span></div>
+            <div class="model-content cal-list-time">01月01日 <span>周日</span></div>
             <div class="cal-list-txt">签到计划，23天早起，第14天</div>
         </li>
         <li onclick="location.href='rank-day.html'">
-            <div class="model-content bg-gray cal-list-time">01月01日 <span>周日</span></div>
+            <div class="model-content cal-list-time">01月01日 <span>周日</span></div>
             <div class="cal-list-txt">签到计划，23天早起，第14天</div>
         </li>
-        <li onclick="location.href='rank-day.html'">
-            <div class="model-content bg-gray cal-list-time">01月01日 <span>周日</span></div>
+        <li class="active" onclick="location.href='rank-day.html'">
+            <div class="model-content cal-list-time">01月01日 <span>周日</span></div>
             <div class="cal-list-txt">签到计划，23天早起，第14天</div>
         </li>
     </ul>
@@ -62,13 +62,26 @@
         }
         return fmt;
     };
+
+
     $( function() {
-        $('.cal-txt').text(new Date().format("yyyy-MM"));
+        $('.cal-txt .txt-time').text(new Date().format("yyyy-MM"));
+
+        var iMonth = new Date().getMonth()+1;
+
+        $('.cal-txt .arrow-left').bind('click',function () {
+
+
+
+
+        });
+
+        $('.cal-txt .arrow-right').bind('click',function () {
+
+        })
     } );
     window.onload=function () {
-        setTimeout(function () {
-            layer.closeAll();
-        },1000);
+        layer.closeAll();
     };
 </script>
 </body>

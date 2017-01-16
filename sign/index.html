@@ -41,30 +41,40 @@
         <li><img src="images/header.jpg" alt=""></li>
         <li><img src="images/header.jpg" alt=""></li>
         <li><img src="images/header.jpg" alt=""></li>
+        <li><img src="images/header.jpg" alt=""></li>
+        <li><img src="images/header.jpg" alt=""></li>
+        <li><img src="images/header.jpg" alt=""></li>
     </ul>
 </div>
 <div class="model-content main-btn">
     <ul class="clearfix">
         <li><button class="bg-default" onclick="location.href='rank.html'">我的主页</button></li>
         <li><button class="bg-default">炫耀一下</button></li>
-        <li><button class="bg-default">积分商城</button></li>
     </ul>
 </div>
 <section class="sign-ruler">
     <div class="ruler-title txt-center">
-        <h2>活动规则</h2>
-        <div class="triangle-wrap bg-default">
+        <h2>活动规则&简介</h2>
+        <div class="triangle-wrap ">
             <span class="triangle"></span>
         </div>
     </div>
     <div class="ruler-txt">
-        <p>1.规则1</p>
-        <p>2.规则2</p>
-        <p>3.规则3</p>
-        <p>4.规则4</p>
-        <p>5.规则5</p>
-        <p>6.规则6</p>
-        <p>7.规则7</p>
+        <div class="">
+            <h3 class="h3-title">活动规则</h3>
+            <p>1.规则1</p>
+            <p>2.规则2</p>
+            <p>3.规则3</p>
+            <p>4.规则4</p>
+
+        </div>
+        <div class="">
+            <h3 class="h3-title">活动简介</h3>
+            <p>1.规则简介</p>
+            <p>2.规则简介</p>
+            <p>3.规则简介</p>
+            <p>4.规则简介</p>
+        </div>
     </div>
 </section>
 <section class="record bg-white">
@@ -75,56 +85,54 @@
                 <div class="serial-number bg-default txt-center fl">01</div>
                 <div class="record-tx fl">
                     <strong>第一天</strong>
-                    <p>1月2日 5:00 <span class="signed">已签到</span></p>
+                    <p>1月2日 5:00</p>
                 </div>
-                <button class="bg-info btn fr">已签到</button>
+                <button class="bg-white btn color-success fr">已签到</button>
             </div>
         </li>
         <li>
             <div class="model-content clearfix">
-                <div class="serial-number bg-gray txt-center fl">02</div>
+                <div class="serial-number bg-default txt-center fl">01</div>
                 <div class="record-tx fl">
-                    <strong>第二天</strong>
+                    <strong>第一天</strong>
                     <p>1月2日 5:00</p>
                 </div>
-                <button class="bg-warning btn fr">忘记签到</button>
+                <button class="bg-default btn color-white fr">签到</button>
             </div>
         </li>
         <li>
             <div class="model-content clearfix">
-                <div class="serial-number bg-gray txt-center fl">03</div>
+                <div class="serial-number bg-default txt-center fl">01</div>
                 <div class="record-tx fl">
-                    <strong>第三天</strong>
+                    <strong>第一天</strong>
                     <p>1月2日 5:00</p>
                 </div>
-                <button class="bg-gray btn fr">尚未开始</button>
-            </div>
-        </li>
-        <li>
-            <div class="model-content clearfix">
-                <div class="serial-number bg-gray txt-center fl">04</div>
-                <div class="record-tx fl">
-                    <strong>第四天</strong>
-                    <p>1月2日 5:00</p>
-                </div>
-                <button class="bg-success btn fr">签到</button>
+                <button class="bg-white btn color-gray fr">尚未开始</button>
             </div>
         </li>
     </ul>
 </section>
 
 <script>
+
+
+
     window.onload=function () {
 
-        setTimeout(function () {
             layer.closeAll();
-        },1000);
-            $('.record').on('click',function () {
-                layer.open({
-                    content: '签到成功',
-                    btn: '关闭'
-                });
-            })
+
+
+
+
+        //弹层提示  调用
+        /*layer.open({
+            content: '签到成功',
+            btn: '关闭'
+        });*/
+
+
+
+
     };
 
 
